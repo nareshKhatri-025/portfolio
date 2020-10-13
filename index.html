@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="main.css">
+    
     </head>
     <body>
         <header>
@@ -18,13 +19,24 @@
            <nav class="top-nav">
                <ul class="nav-list">
                    <li>
-                       <a href="index.html" class="nav-link">Home</a>
-                       <a href="#about" class="nav-link">About</a>
-                       <a href="#skills" class="nav-link">Projects</a>
-                       <a href="#projects" class="nav-link">Skills/Experience</a>
-                       <a href="#education" class="nav-link">Education</a> 
-                       <a href="#contact" class="nav-link">Contact</a>
+                       <a href="index.html" class="nav-link">Home</a>    
                    </li>
+                   <li>
+                     <a href="#about" class="nav-link">About</a>
+                   </li>
+                   <li>
+                    <a href="#projects" class="nav-link">Projects</a>
+                   </li>
+                <li>
+                    <a href="#skill" class="nav-link">Skills</a>
+                </li>
+                <li>
+                    <a href="#experience" class="nav-link">Experience</a> 
+
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
                </ul>
            </nav>
            <div class="landing-text">
@@ -34,51 +46,57 @@
         </header>
         <section class="about" id="about">
             <div class="container">
-                <div class="profile-img">
+               
+                <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
                     <img src="images/profile.jpg" alt="">
                 </div>
-                <div class="about-details">
-                    <h1>About</h1>
-                    <h6>Myself</h6>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid tenetur perferendis architecto numquam repudiandae eveniet modi nobis officia adipisci fugiat,
-                    rem itaque distinctio ab iusto id beatae culpa delectus vitae!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora temporibus cumque eius, 
-                    suscipit alias iusto dolore omnis accusantium esse cupiditate quidem earum et aut ut,
-                    sapiente deleniti deserunt laboriosam fuga?
-                </p>
-            </div>
-            <div class="social-media">
-                <ul class="nav-list">
-                    <li>
-                        <a href="https://www.facebook.com/naresh.khatri.3705157/" class="icon-link">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="icon-link">
-                            <i class="fab fa-twitter-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/nareshKhatri-025" style=" color: purple;"class="icon-link">
-                            <i class="fab fa-github-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/nareshKhatri-025" class="icon-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href ="https://www.instagram.com/naresh121nk/"  style=" color: red;"class="icon-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
+                <div class="about-details" data-aos="fade-left" data-aos-delay="600">
+               
+                    <div class="about-heading">
+                        <h1>About</h1>
+                            <h6>Myself</h6>
+                        </div>  
+                              
+                   <p>
+                    My name is Naresh, and I’m a Software Devloper/Student. 
                     
-                </ul>
+                    I Love Coding and I'm full-time Student of Computer Science Engineering.
+                    My Work areas are App Development (Flutter,Java) and Web Devlopment and Backend Devlopment.
+
+                    </p> 
+                
+                    <div class="social-media">
+                        <ul class="nav-list">
+                            <li>
+                                <a href="https://www.facebook.com/naresh.khatri.3705157/" class="icon-link">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="icon-link">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/nareshKhatri-025"class="icon-link">
+                                    <i class="fab fa-github-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/nareshKhatri-025" class="icon-link">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href ="https://www.instagram.com/naresh121nk/" class="icon-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                       
+                </div>
+            </div>
             </div>
         </section>
         <section class="skill" id="skill">
@@ -88,9 +106,9 @@
                     <h6>Here are my Somes Skills</h6>
                 </div>
                     <div class="my-skills">
-                        <div class="skill">
-                            <div class="icon-container" >
-                                <i class="fas fa-code-group"></i>
+                        <div class="skill" data-aos="fade-in" data-aos-delay="300">
+                            <div class="icon-container " >
+                                <img  src="images/flutter.png" alt="">
                             </div>
                             <h1>Flutter Devloper</h1>
                             <p>
@@ -99,9 +117,9 @@
                                 eveniet modi nobis officia adipisci fugiat,
                             </p>
                         </div>
-                        <div class="skill">
-                            <div class="icon-container" >
-                                <i class="fas fa-code-group"></i>
+                        <div class="skill" data-aos="fade-in" data-aos-delay="600">
+                            <div class="icon-container " >
+                                <img src="images/java.png" alt="">
 
                             </div>
                             <h1>Java</h1>
@@ -111,12 +129,12 @@
                                 eveniet modi nobis officia adipisci fugiat,
                             </p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="fade-in" data-aos-delay="900">
                             <div class="icon-container" >
-                                <i class="fas fa-code-group"></i>
+                                <img src="images/android.png" alt="">
 
                             </div>
-                            <h1>Android Java</h1>
+                            <h1>Android App Development</h1>
                             <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Aliquid tenetur perferendis architecto numquam repudiandae
@@ -134,49 +152,53 @@
                     <h6>Here are my Somes Projects</h6>
                 </div>
                 <div class="projects-item">
-                    <div class="projects-img">
+                    <div class="projects-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
                         <img src="images/profile.jpg" alt="">
                     </div>
-                    <div class="project-description">
+                    <div class="project-description" data-aos="fade-left" data-aos-delay="600">
                         <h6>Flutter Development</h6>
                         <h1> Mobile Applicaton</h1>
-                    </div>
+                    
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Aliquid tenetur perferendis architecto numquam repudiandae
                     </p>
                     <a href="#" class="cta">Check Code</a>
                 </div>
+                </div>
                 
                 <div class="projects-item">
-                    <div class="project-description">
+                    <div class="project-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
                         <h6>Flutter Development</h6>
                         <h1> Mobile Applicaton</h1>
-                    </div>
+                    
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Aliquid tenetur perferendis architecto numquam repudiandae
                     </p>
                     <a href="#" class="cta">Check Code</a>
-                    <div class="projects-img">
+                </div>
+                    <div class="projects-img" data-aos="fade-left" data-aos-delay="1200">
                         <img src="images/profile.jpg" alt="">
                     </div>
                    
                 </div>
 
                 <div class="projects-item">
-                    <div class="projects-img">
+                    <div class="projects-img has-margin-right" data-aos="fade-right" data-aos-delay="1200">
                         <img src="images/profile.jpg" alt="">
                     </div>
-                    <div class="project-description">
+                    <div class="project-description" data-aos="fade-left" data-aos-delay="1500">
                         <h6>Flutter Development</h6>
                         <h1> Mobile Applicaton</h1>
-                    </div>
+                    
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Aliquid tenetur perferendis architecto numquam repudiandae
                     </p>
+                    
                     <a href="#" class="cta">Check Code</a>
+                </div>
                 </div>
         </section>
 
@@ -188,7 +210,23 @@
                 </div>
                 <div class="timeline">
                     <ul>
-                        <li class="date" data-date="09-2020 - present">
+                        <li class="date" data-date="2020 - present">
+                            <h1>World of Professionals</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid tenetur perferendis architecto numquam repudiandae
+                            </p>
+
+                        </li>
+                        <li class="date" data-date="2020 - present">
+                            <h1>World of Professionals</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid tenetur perferendis architecto numquam repudiandae
+                            </p>
+
+                        </li>
+                        <li class="date" data-date="2020 - present">
                             <h1>World of Professionals</h1>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -214,20 +252,21 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email..." required>
 
                     <label for="message">Message</label>
-                    <input type="text" id="message" name="message"  required>
+                    <textarea  id="message" name="message" cols="10" rows="10" required></textarea>
 
                     <input type="submit" value="Submit">
 
                 </form>
             </div>
         </section class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevran-up"></i>
+
+        
+
+        <footer class="copyright">
+            <div class="up" id="up">
+                <i class="fas fa-chevron-up"></i>
+            </div>
             <p>Copyright &copy; 2020 Naresh Khatri</p>
-
-        </div>
-
-        <footer>
 
         </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
