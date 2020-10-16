@@ -120,7 +120,7 @@ header{
 
 }
 li{
-    margin:0 2rem;
+    margin:0 1rem;
    
 
 }
@@ -596,5 +596,64 @@ font-size: 3rem;
         right: 2rem;
     }
 
+}
+@media only screen and (max-device-width: 450px){
+    .menu-toggler{
+        position: relative;
+        left: 1rem;
+
+    }
+    li{
+        margin: 1rem 1rem;
+       
+    
+    }
+    .landing-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .landing-text h1{
+        font-size: 6rem;
+        margin-left: 0 auto;
+    }
+    .landing-text h6{
+        font-size: 1.5rem;
+        margin-left: 0 auto;
+    }
+    .profile-img{
+        width:fit-content;
+        height:fit-content;
+    }
+    .about-details{
+    align-items: center;
+    margin: auto;
+        
+    }
+    
+    .social-media i{
+        font-size: 4rem;
+        transition: color 650ms;
+    }
+    .timeline h1{
+        font-size: 1.8rem ;
+
+    }
+    .timeline{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+    .up{
+       
+    width: 4rem;
+    height: 4rem;
+    align-content: flex-end;
+    }
+    ,
+   
 }
 /*End media queries*/
