@@ -16,7 +16,7 @@ html{
 }
 body{
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     background: url("images/sitebg.jpg") no-repeat center fixed;
     background-size: cover;
 }
@@ -242,10 +242,15 @@ border-radius: initial;
 .profile-img{
     flex: 1;
     margin-right: 5rem;
-
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.6s ease-in-out;
 }
 .about-details{
     flex: 1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s ease;
 }
 .social-media{
     margin-top: 5rem;
@@ -289,8 +294,8 @@ border-radius: initial;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-
-
+    transition: all 0.5s ease-in;
+    opacity: 0;
 }
 .skill h1{
     text-transform: uppercase;
@@ -324,40 +329,58 @@ border-radius: initial;
     align-items: center;
     justify-content: center;
     margin-bottom: 5rem;
+    
 }
 .projects-item:last-child{
     margin-bottom: 0;
 }
 
-.profile-img{
-    width: 50rem;
-    flex: 1;
+.projects-img{
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: translateX(-100%);
+}
 
+.projects-img-mid{
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: translateX(100%);
 }
 
 .project-description{
     flex: 1;
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: translateX(100%);
 }
-.project-description h1{
+
+.project-description-mid{
+    flex: 1;
+    opacity: 0;
+    transition: all 0.6s ease-out;
+    transform: translateX(-100%);
+}
+
+.project-description h1,.project-description-mid h1{
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
    
 }
-.project-description h6{
+.project-description h6, .project-description-mid h6{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.3;
 }
-.project-description .cta{
+.project-description .cta, .project-description-mid .cta{
     display: inline-block;
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #3883ff;
 }
-.project-description .cta:hover{
+.project-description .cta:hover, .project-description-mid .cta:hover{
     color: #2f67cd;
 }
 /*End services*/
@@ -500,6 +523,8 @@ input[type="submit"]:hover{
 
 /*End animations*/
 
+
+
 /*Start media queries*/
 @media screen and (max-width: 768px){
     body{
@@ -585,6 +610,7 @@ font-size: 3rem;
     .projects-img{
         margin: 0 0 2rem 0;
         order: 1;
+        
     }
     .project-description{
         margin: 0;
@@ -679,5 +705,5 @@ font-size: 3rem;
     }
     
    
-}
-/*End media queries*/
+} 
+/* End of media query */

@@ -1,0 +1,20 @@
+/*Start Scroll Magic CLasses */
+
+.profile-img.fade-left{
+    opacity: 1;
+    transform: translateX(0);
+}
+.about-details.fade-right{
+    opacity: 1;
+    transform: translateX(0);
+}
+.skill.show-skill{
+    opacity: 1;
+}
+.projects-img.fade-left, .projects-img-mid.fade-right, .project-description.fade-left, .project-description-mid.fade-right{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/*End Scroll Magic CLasses */
