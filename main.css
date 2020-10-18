@@ -19,9 +19,11 @@ body{
     /* height: 100vh; */
     background: url("images/sitebg.jpg") no-repeat center fixed;
     background-size: cover;
+    /* overflow-x: hidden; */
 }
 section{
     padding: 6rem 0;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
@@ -92,7 +94,7 @@ img{
 
 /*Start header*/
 header{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -331,14 +333,13 @@ border-radius: initial;
     margin-bottom: 5rem;
     
 }
-.projects-item:last-child{
-    margin-bottom: 0;
-}
 
-.projects-img{
+
+.projects-img,.projects-img-last{
     opacity: 0;
     transition: all 0.6s ease-out;
     transform: translateX(-100%);
+    margin-bottom: 1rem;
 }
 
 .projects-img-mid{
@@ -347,7 +348,7 @@ border-radius: initial;
     transform: translateX(100%);
 }
 
-.project-description{
+.project-description,.project-description-last{
     flex: 1;
     opacity: 0;
     transition: all 0.6s ease-out;
@@ -361,26 +362,27 @@ border-radius: initial;
     transform: translateX(-100%);
 }
 
-.project-description h1,.project-description-mid h1{
+
+.project-description h1,.project-description-mid h1, .project-description-last h1{
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
-   
 }
-.project-description h6, .project-description-mid h6{
+.project-description h6, .project-description-mid h6, .project-description-last h6{
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 300;
     opacity: 0.3;
+    margin-top: 2rem;
 }
-.project-description .cta, .project-description-mid .cta{
+.project-description .cta, .project-description-mid .cta, .project-description-last .cta{
     display: inline-block;
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #3883ff;
 }
-.project-description .cta:hover, .project-description-mid .cta:hover{
+.project-description .cta:hover, .project-description-mid .cta:hover, .project-description-last .cta:hover{
     color: #2f67cd;
 }
 /*End services*/
@@ -607,12 +609,15 @@ font-size: 3rem;
     .projects-item{
         flex-direction: column;
     }
-    .projects-img{
-        margin: 0 0 2rem 0;
-        order: 1;
-        
+    .projects-img, .projects-img-last{
+        width: 274px;
+        margin: 0 auto;
     }
-    .project-description{
+    .projects-img-mid{
+        width: 274px;
+        order: 1;        
+    }
+    .project-description-mid{
         margin: 0;
         order: 2;
     }

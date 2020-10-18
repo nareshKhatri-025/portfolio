@@ -26,10 +26,12 @@ $(document).ready(function(){
     // create a scene
     let profileScene = new ScrollMagic.Scene({
         triggerElement: '.profile-img',
+       
     }).setClassToggle('.profile-img', 'fade-left').addTo(controller);
 
     let aboutDetailsScene = new ScrollMagic.Scene({
         triggerElement: '.about-details',
+        
     }).setClassToggle('.about-details', 'fade-right').addTo(controller);
 
     let skills = document.querySelectorAll(".skill");
@@ -49,7 +51,6 @@ $(document).ready(function(){
         triggerElement: '.project-description',
     }).setClassToggle('.project-description', 'fade-left').addTo(controller);
 
-
     let projectMidImgScene = new ScrollMagic.Scene({
         triggerElement: '.projects-img-mid',
     }).setClassToggle('.projects-img-mid', 'fade-right').addTo(controller);
@@ -58,6 +59,13 @@ $(document).ready(function(){
         triggerElement: '.project-description-mid',
     }).setClassToggle('.project-description-mid', 'fade-right').addTo(controller);
 
+    let projectLastImgScene = new ScrollMagic.Scene({
+        triggerElement: '.projects-img-last',
+    }).setClassToggle('.projects-img-last', 'fade-left').addTo(controller);
+
+    let projectLastDesScene = new ScrollMagic.Scene({
+        triggerElement: '.project-description-last',
+    }).setClassToggle('.project-description-last', 'fade-left').addTo(controller);
 
 
 });

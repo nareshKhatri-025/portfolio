@@ -11,7 +11,7 @@
 .skill.show-skill{
     opacity: 1;
 }
-.projects-img.fade-left, .projects-img-mid.fade-right, .project-description.fade-left, .project-description-mid.fade-right{
+.projects-img.fade-left, .projects-img-mid.fade-right, .project-description.fade-left, .project-description-mid.fade-right, .project-description-last.fade-left, .projects-img-last.fade-left{
     opacity: 1;
     transform: translateX(0);
 }
