@@ -16,7 +16,7 @@ html{
 }
 body{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: url("images/sitebg.jpg") no-repeat center fixed;
     background-size: cover;
 }
@@ -116,13 +116,9 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
-
 }
 li{
     margin:0 1rem;
-   
-
 }
 .nav-link{
     font-family: "HistoriaDemo" ,sans-serif;
@@ -130,6 +126,7 @@ li{
     padding: 2rem;
     text-transform: uppercase;
 }
+
 .nav-link:hover,
 .nav-link:focus{
     background: linear-gradient(to top,#ffe838,#fd57bf);
@@ -137,6 +134,7 @@ li{
     -webkit-background-clip:text;
     -webkit-text-fill-color: transparent;
 }
+
 .top-nav.open{
 top: 0;
 border-radius: initial;
@@ -154,23 +152,24 @@ border-radius: initial;
     cursor: pointer;
     z-index: 1500;
     transition: transform 650ms ease-out;
-
 }
+
 .menu-toggler.open{
     transform: rotate(-45deg);
-
+    position: fixed;
+    top: 4%;
+    left: 96%;
 }
 .bar{
     background:linear-gradient(to right ,#ffe832,#fd57bf);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
-
-
 }
 .bar.half{
   width: 50%;
 }
+
 .bar.start{
     transform-origin:right;
     transition: transform 650ms cubic-bezier(0.54,-0.81,0.57,0.57);
@@ -185,7 +184,11 @@ border-radius: initial;
     transition: transform 650ms cubic-bezier(0.54,-0.81,0.57,0.57);
 }
 .open .bar.start{
-    transform: rotate(-450deg) translate(-.8rem);
+    transform: rotate(-450deg) translate(-1.8rem);
+}
+
+.open .bar.end{
+    transform: rotate(450deg) translate(-4.2rem);
 }
 .landing-text{
     position: absolute;
@@ -389,26 +392,28 @@ border-radius: initial;
     margin-bottom: 0;
     border:none;
 }
+
 .timeline .date::before,
 .timeline .date::after{
     position: absolute;
     display: block;
     top: 50%;
     transform: translateY(-50%);
-
 }
-.timeline .date ::before{
+
+.timeline .date::before{
     content: attr(data-date);
-    left: -21rem;
     text-align: right;
     min-width: 12rem;
+    left: -23rem;
     font-size: 1.5rem;
+    color: #fff;
 }
 .timeline .date::after{
     content: '';
     box-shadow: 0 0 0 4px #fd57bf;
     border-radius: 100%;
-    left: -8rem;
+    left: -7rem;
     height: 1.5rem;
     width: 1.5rem;
     background-color: #313534;
@@ -426,25 +431,25 @@ form{
 
 }
 form label{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 
 }
 input,textarea{
+    border-radius: 3px;
     width: 100%;
     padding: 1rem;
-    margin-bottom: 5px;
+    margin: 12px 0;
     border: none;
     outline-color: #fd57bf;
-
 }
 input[type="submit"]{
     width: initial;
     background-color: #fd57bf;
     color: #eee;
     padding: 1rem 2rem;
-   border-radius: .8rem;
-   cursor: pointer;
-   transition: background-color 650ms;
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: background-color 650ms;
 
 }
 input[type="submit"]:hover{
@@ -498,10 +503,13 @@ input[type="submit"]:hover{
 /*Start media queries*/
 @media screen and (max-width: 768px){
     body{
-      
         background: url("images/sitebg.jpg") no-repeat center fixed;
         background-size: cover;
     }
+    .menu-toggler.open{
+        left: 90%;
+    }
+
     .landing-text h1{
         font-size: 15rem;
     }
@@ -547,7 +555,6 @@ font-size: 3rem;
 }
 @media screen and (max-width: 600px){
     body{
-      
         background: url("images/sitebg2.jpg") no-repeat center fixed;
         background-size: cover;
     }
@@ -599,14 +606,15 @@ font-size: 3rem;
 }
 @media only screen and (max-device-width: 450px){
     .menu-toggler{
-        position: relative;
+        position: absolute;
         left: 1rem;
-
     }
+    .menu-toggler.open{
+        left: 85%;
+    }
+
     li{
         margin: 1rem 1rem;
-       
-    
     }
     .landing-text {
         display: flex;
@@ -616,44 +624,60 @@ font-size: 3rem;
     }
     .landing-text h1{
         font-size: 6rem;
-        margin-left: 0 auto;
+        margin: 0 auto;
     }
     .landing-text h6{
         font-size: 1.5rem;
-        margin-left: 0 auto;
+        margin: 0 auto;
     }
     .profile-img{
         width:fit-content;
         height:fit-content;
     }
     .about-details{
-    align-items: center;
-    margin: auto;
-        
+        align-items: center;
+        margin: auto;
     }
     
     .social-media i{
         font-size: 4rem;
         transition: color 650ms;
     }
+    .fa-facebook-square{
+        color:#4267b2;
+    }
+    .fa-github-square{
+        color:purple
+    
+    }
+    .fa-twitter-square{
+        color: #38a1f3;
+    }
+    .fa-linkedin-in{
+        color: #38a1f3;
+    }
+    
+    .fa-instagram{
+        color:red
+    }
     .timeline h1{
-        font-size: 1.8rem ;
-
+        font-size: 1.8rem;
     }
     .timeline{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-
     }
-    .up{
-       
-    width: 4rem;
-    height: 4rem;
-    align-content: flex-end;
+    .timeline .date::after{
+        left: -7rem;
     }
-    ,
+    .up{   
+        width: 4rem;
+        height: 4rem;
+        align-content: flex-end;
+    }
+    
    
 }
 /*End media queries*/
