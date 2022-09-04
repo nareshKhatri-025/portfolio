@@ -1,23 +1,26 @@
-$(document).ready(function(){
-    $('.menu-toggler').on("click", function(){
+$(document).ready(function() {
+    $('.menu-toggler').on("click", function() {
         $(this).toggleClass('open');
         $('.top-nav').toggleClass('open');
     });
+    $('').on('click', function() {
+        console.log("Submit button is clicked");
+    });
 
-    $('.top-nav .nav-link').on("click", function(){
+    $('.top-nav .nav-link').on("click", function() {
         $('.menu-toggler').removeClass('open');
         $('.top-nav').removeClass('open');
     });
 
-    $('nav a[href*="#"]').on("click", function(){
+    $('nav a[href*="#"]').on("click", function() {
         $('html, body').animate({
-            scrollTop:$($(this).attr('href')).offset().top - 100
-        },2000); 
+            scrollTop: $($(this).attr('href')).offset().top - 100
+        }, 2000);
     });
-    $('#up').on("click", function(){
+    $('#up').on("click", function() {
         $('html, body').animate({
-            scrollTop:0
-        },2000);
+            scrollTop: 0
+        }, 2000);
     });
 
     // init controller
@@ -26,12 +29,12 @@ $(document).ready(function(){
     // create a scene
     let profileScene = new ScrollMagic.Scene({
         triggerElement: '.profile-img',
-       
+
     }).setClassToggle('.profile-img', 'fade-left').addTo(controller);
 
     let aboutDetailsScene = new ScrollMagic.Scene({
         triggerElement: '.about-details',
-        
+
     }).setClassToggle('.about-details', 'fade-right').addTo(controller);
 
     let skills = document.querySelectorAll(".skill");
